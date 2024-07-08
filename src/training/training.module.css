@@ -1,0 +1,124 @@
+.parent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    *{
+        user-select: none;
+    }
+    .interpretation{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: black;
+    }
+    .group2{
+        background-color: black;
+        border-radius: 10px;
+        width: 230px;
+        height: 100%;
+        .addPanel{
+            background-color: rgb(201, 17, 17);
+            margin: 10px;
+            border-radius: 10px;
+            height: 100px;
+            span{
+                transition: all 100ms ease-in;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                border-radius: 10px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #6e6bfe;
+                }
+                &:active{
+                    background-color: #00197e;
+                }
+            }
+        }
+    }
+    .group{
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: black;
+        .options{
+            display: flex;
+            gap: 10px;
+            input[type="checkbox"]{
+                display: none;
+                &:checked + label{
+                    background-color: #ef8b80;
+                    color: white;
+                }
+            }
+            label{
+                padding: 10px;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                &:hover{
+                    background-color: #6e6bfe;
+                    color: white;
+                }
+                &:active{
+                    background-color: #00197e!important;
+                    color: white;
+                }
+            }
+        }
+        .canvas{
+            width: 480px;
+            height: 300px;
+            background-color: white;
+        }
+        .controlRange{
+            width: 100%;
+            input[type="range"]{
+                width: 100%;
+                background-color: #6e6bfe;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: #00197e;
+                }
+                &::-webkit-slider-thumb{
+                    background-color: white;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+        }
+        .controls{
+            display: flex;
+            gap: 10px;
+            position: relative;
+            .btn{
+                padding: 10px;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: #6e6bfe;
+                }
+                &:active{
+                    background-color: #00197e;
+                    color: white;
+                }
+            }
+        }
+    }
+}
